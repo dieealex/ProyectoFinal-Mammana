@@ -1,14 +1,25 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 function Item({ id, title, image, price }) {
   return (
-    <div className="border p-2 rounded shadow hover:shadow-lg transition cursor-pointer">
-      <img src={image} alt={title} className="w-full h-40 object-contain" />
-      <h3 className="mt-2">{title}</h3>
-      <p className="font-semibold text-gray-700">${price}</p>
-      <Link to={`/item/${id}`} className="text-blue-500 underline">Ver detalle</Link>
+    <div className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
+      <img
+        src={image}
+        alt={title}
+        className="h-48 w-full object-cover"
+      />
+      <div className="p-4 flex flex-col justify-between flex-1">
+        <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+        <p className="text-gray-600 text-sm mb-4">${price}</p>
+        <Link
+          to={`/item/${id}`}
+          className="bg-blue-600 text-white text-center py-2 px-4 rounded hover:bg-blue-700 transition"
+        >
+          Ver detalle
+        </Link>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Item
+export default Item;
