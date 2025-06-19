@@ -27,15 +27,15 @@ function Cart() {
           {cart.map((item) => (
             <li
               key={item.id}
-              className="flex flex-col md:flex-row items-center justify-between bg-gray-50 p-4 rounded-md shadow-sm"
+              className="flex flex-col md:flex-row items-start md:items-center justify-between bg-gray-50 p-4 rounded-md shadow-sm"
             >
-              <div className="flex items-center gap-6 w-full md:w-auto">
+              <div className="flex items-start gap-4 w-full md:w-auto">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-24 h-24 object-contain rounded"
+                  className="w-20 h-20 md:w-24 md:h-24 object-contain rounded"
                 />
-                <div>
+                <div className="text-left">
                   <h3 className="text-lg font-semibold text-gray-700">{item.title}</h3>
                   <p className="text-sm text-gray-600">Cantidad: {item.quantity}</p>
                   <p className="text-sm text-gray-600">Precio: ${item.price}</p>

@@ -6,9 +6,9 @@ function Item({ id, title, image, price }) {
       <img
         src={image}
         alt={title}
-        className="h-48 w-full object-cover"
+        className="w-full h-48 object-contain bg-white p-2"
       />
-      <div className="p-4 flex flex-col justify-between flex-1">
+      <div className="p-4 flex flex-col justify-between flex-1 text-left">
         <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
         <p className="text-gray-600 text-sm mb-4">${price}</p>
         <Link

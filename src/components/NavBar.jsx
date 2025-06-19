@@ -8,7 +8,7 @@ function NavBar() {
         <Link to="/" className="text-2xl font-bold text-gray-800 hover:text-blue-600 transition">
           Fútbol Store ⚽
         </Link>
-        <nav className="flex items-center gap-6">
+        <nav className="bg-blue-600 text-white p-4 flex justify-between items-center">
           <Link
             to="/"
             className="text-gray-700 hover:text-blue-600 font-medium transition"
